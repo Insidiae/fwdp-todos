@@ -1,0 +1,117 @@
+/* Styles "borrowed" from the TodoList exercise from Josh W. Comeau's The Joy of React. */
+body {
+  padding: 0px;
+  background: hsl(210deg 15% 6%);
+  color-scheme: dark;
+  color: white;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1024px;
+  margin-inline: auto;
+}
+.list-wrapper {
+  flex: 1;
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  list-style-type: none;
+}
+.todo-list form {
+  display: flex;
+  border: 1px solid hsl(210deg 20% 20%);
+  border-radius: 4px;
+  padding: 4px;
+}
+.todo-list .toggle {
+  flex: 1;
+  position: relative;
+  display: flex;
+  padding: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.todo-list .toggle.completed::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 5px;
+  background: hsl(50deg 50% 50% / 0.7);
+  border-radius: 100px;
+  transform: translateY(1.5px);
+}
+.delete-btn {
+  display: grid;
+  place-content: center;
+  width: 56px;
+  height: 56px;
+  background: transparent;
+  color: red;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background: hsl(210deg 15% 15%);
+}
+.create-new-todo-wrapper {
+  background: hsl(210deg 15% 15%);
+  border-radius: 4px;
+}
+.create-new-todo-wrapper form {
+  padding: 16px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.row input,
+.row button {
+  height: 2.5rem;
+  font-size: 1.125rem;
+}
+.row input {
+  flex: 4;
+  min-width: 220px;
+  border: none;
+  border-bottom: 2px solid white;
+  border-radius: 2px;
+  background: transparent;
+  outline-offset: 4px;
+}
+.row button {
+  flex: 1;
+  min-width: 50px;
+  background: inherit;
+  border: none;
+  background: hsl(0deg 0% 100% / 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.row button:hover {
+  background: hsl(0deg 0% 100% / 0.2);
+}
